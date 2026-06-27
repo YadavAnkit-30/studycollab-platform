@@ -1,0 +1,101 @@
+/* Custom Utilities */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body { 
+    font-family: 'Inter', sans-serif; 
+}
+
+.glass-panel {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.scroll-smooth::-webkit-scrollbar { 
+    width: 6px; 
+}
+
+.scroll-smooth::-webkit-scrollbar-track { 
+    background: transparent; 
+}
+
+.scroll-smooth::-webkit-scrollbar-thumb { 
+    background-color: #cbd5e1; 
+    border-radius: 20px; 
+}
+
+.message-enter { 
+    animation: slideIn 0.2s ease-out; 
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.loader {
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3b82f6;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin { 
+    0% { transform: rotate(0deg); } 
+    100% { transform: rotate(360deg); } 
+}
+
+/* Markdown-like styling for AI responses */
+.ai-content strong { 
+    font-weight: 700; 
+    color: #4b5563; 
+}
+
+.ai-content ul { 
+    list-style-type: disc; 
+    padding-left: 1.5rem; 
+    margin-top: 0.5rem; 
+    margin-bottom: 0.5rem; 
+}
+
+.ai-content ol { 
+    list-style-type: decimal; 
+    padding-left: 1.5rem; 
+    margin-top: 0.5rem; 
+    margin-bottom: 0.5rem; 
+}
+
+.ai-content code { 
+    background-color: #f1f5f9; 
+    padding: 0.1rem 0.3rem; 
+    border-radius: 0.2rem; 
+    font-family: monospace; 
+    font-size: 0.9em; 
+    color: #db2777; 
+}
+
+/* Quiz Specific Styles */
+.option-card:hover { 
+    border-color: #3b82f6; 
+    background-color: #eff6ff; 
+}
+
+.option-selected { 
+    border-color: #2563eb; 
+    background-color: #eff6ff; 
+    box-shadow: 0 0 0 2px #2563eb; 
+}
+
+/* Timer Pulse */
+.timer-active { 
+    animation: pulseRed 2s infinite; 
+    color: #ef4444; 
+}
+
+@keyframes pulseRed { 
+    0% { opacity: 1; } 
+    50% { opacity: 0.5; } 
+    100% { opacity: 1; } 
+}
